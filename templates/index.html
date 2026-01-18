@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNIST 手寫數字辨識</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>MNIST 手寫數字辨識</h1>
+        <p>在下方的畫布上寫一個數字 (0-9)，然後點擊「辨識」按鈕。</p>
+        <div class="canvas-container">
+            <canvas id="canvas" width="280" height="280"></canvas>
+        </div>
+        <div class="button-container">
+            <button id="predict-btn">辨識</button>
+            <button id="clear-btn">清除</button>
+        </div>
+        <h2>辨識結果：<span id="result">-</span></h2>
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
